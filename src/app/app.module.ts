@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
-
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component'; // Component principal de la aplicacion
+import { LaddaModule } from 'angular2-ladda'; // Modulo de Ladda
 
 
 @NgModule({
@@ -10,7 +11,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    LaddaModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

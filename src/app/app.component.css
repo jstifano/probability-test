@@ -1,0 +1,22 @@
+/* Clase del input */
+.form-control {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #d2d6de;
+    height: 25px;
+}
+.form-control:focus {
+    border-color: #389af0;
+    box-shadow: none;
+}
+.form-control:-ms-input-placeholder, .form-control::-moz-placeholder, .form-control::-webkit-input-placeholder {
+    color: #bbb;
+    opacity: 0.5;
+}
+/* Clase del input */
+
+/* Clase para arrojar el resultado */
+.result-color{
+	color: #F44336;
+}
+/* Clase para arrojar el resultado */
