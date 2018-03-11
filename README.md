@@ -4,7 +4,7 @@ Aplicación web desarrollada bajo el framework Angular versión 5 que permite a 
 
 ## Instalación 
 
-1. Clonar el proyecto desde el repositiorio público creado[Repositorio](https://github.com/jstifano/probability-test.git)
+1. Clonar el proyecto desde el repositiorio público creado [Repositorio](https://github.com/jstifano/probability-test.git)
 
 2. Luego ubicarse en la carpeta root del proyecto y colocar el comando `npm install` para instalar todas las dependencias del proyecto
 
