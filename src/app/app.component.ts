@@ -94,6 +94,9 @@ export class AppComponent {
 
 	// Simulo los 1000 lanzamientos
 	for (let i = 0 ; i < 1000; i++) {
+		// Chequeo si tengo capital de donde apostar
+		if(capital <= 0) break;
+		
 		// La moneda lanzada cayo en cara
 		if( Math.round(Math.random()) === 0 ){
 			wins += 1;
@@ -102,9 +105,6 @@ export class AppComponent {
 		else {
 			capital = capital - cont; // Resto lo apostado
 		}
-
-		// Chequeo si tengo capital de donde apostar
-		if(capital <= 0) break;
 		
 		cont = initial_proportion * capital;
 	}
