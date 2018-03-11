@@ -20,3 +20,20 @@
 	color: #F44336;
 }
 /* Clase para arrojar el resultado */
+
+.div-align{
+	text-align: center;
+}
+
+.error-color{
+    color: #f05050; 
+    font-size: 0.85em;
+    position: relative;
+    right: 36px;
+}
+
+/* Coloca el cursor "no permitido" cuando el botón está disabled */
+.cursor-not-allowed:hover{
+    cursor: not-allowed;
+}
+/* Coloca el cursor "no permitido" cuando el botón está disabled */

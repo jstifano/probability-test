@@ -1,15 +1,15 @@
-<div style="text-align: center; ">
+<div class="div-align">
   <h1>
     {{ getTitle() }}
   </h1>
   
-  <input class="form-control" placeholder="Ejm: 1/4" [(ngModel)]="proportion" [ngModelOptions]="{standalone: true}" (ngModelChange)="setProportion(proportion)" >
+  <input class="form-control" placeholder="Ejm: 1/4" [(ngModel)]="proportion" [ngModelOptions]="{standalone: true}" (ngModelChange)="setProportion(proportion)" maxlength="10">
   <span>
-    <button [ladda]="getShowSpinner()" class="ladda-button btn btn-block btn-flat margin-top-10" data-color="blue" data-style="zoom-out" data-size="s" (click)="calculateProbability(getProportion())">
+    <button [ladda]="getShowSpinner()" [ngClass]="{ 'cursor-not-allowed': !getEnable() }" class="ladda-button btn btn-block btn-flat margin-top-10" data-color="blue" data-style="zoom-out" data-size="s" (click)="calculateProbability(getProportion())" [disabled]="proportion == null || !getEnable()">
       <span class="ladda-label">Calcular</span>
       <span class="ladda-spinner"></span>
     </button>
-  </span> 
+  </span>
   
   <h3> La posibilidad de ser millonario es: 
     <strong *ngIf="result" class="result-color">{{ getResult() }}</strong>

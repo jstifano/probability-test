@@ -16,12 +16,14 @@ export class AppComponent {
   private showLadda: boolean; // Variable para mostrar u ocultar el spinner
   private proportion: string; // Fraccion de la proporcion que se va apostar
   private result: string;
+  private enableButton: boolean; // Deshabilitar el boton si el campo es invalido
 
   // Constructor del componente
   constructor(){
   	this.title = "¡Posibilidad de ser millonario!";
   	this.showLadda = false;
-  	this.result = undefined; 
+  	this.result = undefined;
+  	this.enableButton = false;
   }
 
   // Metodo para obtener el título de la vista
@@ -41,6 +43,21 @@ export class AppComponent {
 
   // Metodo para setear la proporcion introducida por el usuario 
   setProportion = (proportion: string) => {
+  	if ( proportion.indexOf('/') === -1 || 
+  		isNaN(parseInt(proportion.split('/')[0])) || 
+  		isNaN(parseInt(proportion.split('/')[1])) || 
+  		proportion.split('/')[0] > proportion.split('/')[1] ||
+  		proportion.split('/')[0] === "" || 
+  		proportion.split('/')[1] === ""
+  	){
+  		console.log("ENTRO EN EL IF");
+  		this.setEnable(false);
+  	}
+  	else{
+  		console.log("ENTRO EN EL ELSE");
+  		this.setEnable(true);	
+  	}
+
   	this.proportion = proportion;
   }
 
@@ -59,6 +76,14 @@ export class AppComponent {
   	return this.result;
   }
 
+  setEnable = (value: boolean) => {
+  	this.enableButton = value;
+  }
+
+  getEnable = () => {
+  	return this.enableButton;
+  }
+
   // Metodo que realiza el calculo de probabilidad si puedo ser millonario
   calculateProbability = (proportion: string) => {
   	this.setShowSpinner(true);
@@ -70,7 +95,7 @@ export class AppComponent {
 	// Simulo los 1000 lanzamientos
 	for (let i = 0 ; i < 1000; i++) {
 		// La moneda lanzada cayo en cara
-		if( Math.round(Math.random()) == 0 ){
+		if( Math.round(Math.random()) === 0 ){
 			wins += 1;
 			capital = capital + (cont*2); // Si es cara, lo apostado * 2
 		}
@@ -90,7 +115,7 @@ export class AppComponent {
 		this.setProportion(""); // Limpio el campo de calcular
 		this.setShowSpinner(false); // Quito el spinner
 		this.setResult(undefined); // Quito el resultado de la pantalla
-	}, 7000);
+	}, 4000);
   }
 
 }
