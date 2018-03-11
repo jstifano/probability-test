@@ -1,6 +1,6 @@
 # Probability App - Descripción
 
-Aplicación web desarrollada bajo el framework Angular versión 5 que permite a los usuarios resolver bajo una interfaz que posibilidad tiene de convertirse en millonario luego de lanzar determinadas veces una moneda.
+Aplicación web desarrollada bajo el framework Angular versión 5 que permite a los usuarios resolver bajo una interfaz, que posibilidad tiene de convertirse en millonario luego de lanzar determinadas veces (1000) una moneda.
 
 ## Instalación 
 
@@ -8,7 +8,7 @@ Aplicación web desarrollada bajo el framework Angular versión 5 que permite a 
 
 2. Luego ubicarse en la carpeta root del proyecto y colocar el comando `npm install` para instalar todas las dependencias del proyecto
 
-3. Levantar el servidor web con el comando `npm serve`
+3. Levantar el servidor web con el comando `ng serve`
 
 ## Detalles de la aplicación 
 
