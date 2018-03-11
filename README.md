@@ -14,7 +14,7 @@ Aplicación web desarrollada bajo el framework Angular versión 5 que permite a 
 
 * La vista muestra un input con un botón para calcular la posibilidad de ser millonario.
 
-* El campo verifica si se coloca un proporción fija válida en forma de fracción. Ejm: 1/4, /2, 4/5, etc.
+* El campo verifica si se coloca un proporción fija válida en forma de fracción. Ejm: 1/4, 1/2, 4/5, etc.
 
 * Al presionar el botón "CALCULAR", se mostrará el resultado de la posibilidad por 4 segundos en conjunto con una animación de Ladda colocada en el botón, la animación se la coloqué de esa manera debido a que la función se realiza muy rápido impidiendo que se vea.
 
