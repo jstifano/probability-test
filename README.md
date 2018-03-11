@@ -1,27 +1,24 @@
-# ProbabilityApp
+# Probability App - Descripción
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+Aplicación web desarrollada bajo el framework Angular versión 5 que permite a los usuarios resolver bajo una interfaz que posibilidad tiene de convertirse en millonario luego de lanzar determinadas veces una moneda.
 
-## Development server
+## Instalación 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Clonar el proyecto desde [GitHub](https://github.com/jstifano/probability-test.git)
 
-## Code scaffolding
+2. Luego ubicarse en la carpeta root del proyecto y colocar el comando ~~~ npm install ~~~ para instalar todas las dependencias del proyecto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. Levantar el servidor web con el comando ~~~ ng serve ~~~
 
-## Build
+## Detalles de la aplicación 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+* La vista muestra un input con un botón para calcula la posibilidad de ser millonario.
 
-## Running unit tests
+* El campo válida si se coloca un proporción fija válida en forma de fracción. Ejm: 1/4, /2, 4/5, etc.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Al presionar el botón "CALCULAR", se mostrará el resultado de la posibilidad por 4 segundos en conjunto con una animación de Ladda colocada en el botón, la animación se la coloqué de esa manera debido a que la función se realiza muy rápido impidiendo que se vea.
 
-## Running end-to-end tests
+* Luego de los 4 segundos de haber mostrado la información, estará disponible de nuevo el input para colocar una nueva proporción y calcular la posibilidad.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
